@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using GluonGui.Dialog;
+using Model;
 using Model.Runtime.Projectiles;
 using UnityEngine;
+using Utilities;
 
 namespace UnitBrains.Player
 {
@@ -12,7 +16,9 @@ namespace UnitBrains.Player
         private float _temperature = 0f;
         private float _cooldownTime = 0f;
         private bool _overheated;
-        
+
+        List<Vector2Int> outOfReachTarget = new List<Vector2Int>();
+
         protected override void GenerateProjectiles(Vector2Int forTarget, List<BaseProjectile> intoList)
         {
             float overheatTemperature = OverheatTemperature;
@@ -36,7 +42,14 @@ namespace UnitBrains.Player
 
         public override Vector2Int GetNextStep()
         {
-            return base.GetNextStep();
+            Vector2Int result = new Vector2Int();
+            if (outOfReachTarget.Count > 0)
+            {
+                result = unit.Pos.CalcNextStepTowards(outOfReachTarget[0]);
+                return result;
+            }
+            else return unit.Pos;
+            
         }
 
         protected override List<Vector2Int> SelectTargets()
@@ -45,22 +58,51 @@ namespace UnitBrains.Player
             // Homework 1.4 (1st block, 4rd module)
             ///////////////////////////////////////
             float minDist = float.MaxValue;
-            Vector2Int nearTarget = new Vector2Int();
-            List<Vector2Int> result = GetReachableTargets();
-            if(result.Count > 0)
+            List<Vector2Int> result = new List<Vector2Int>();
+            Vector2Int DungTarget = new Vector2Int();
+            result = GetAllTargets().ToList();
+            if (result.Count > 0)
             {
-                foreach(Vector2Int r in result)
+                foreach (var target in result)
                 {
-                    if(minDist > DistanceToOwnBase(r))
+                    if (DistanceToOwnBase(target) < minDist)
                     {
-                        minDist = DistanceToOwnBase(r);
-                        nearTarget = r;
+                        minDist = DistanceToOwnBase(target);
+                        DungTarget = target;
                     }
                 }
-                result.Clear();
-                result.Add(nearTarget);
+                if(IsTargetInRange(DungTarget))
+                {
+                    outOfReachTarget.Clear();
+                    result.Clear();
+                    result.Add(DungTarget);
+                    return result;
+                }
+                else
+                {
+                    outOfReachTarget.Add(DungTarget);
+                    result.Clear();
+                    return result;
+                }
             }
-            return result;
+            else
+            {
+                Vector2Int botBase = runtimeModel.RoMap.Bases[0];
+
+                if (IsTargetInRange(botBase))
+                {
+                    outOfReachTarget.Clear();
+                    result.Add(botBase); 
+                    return result;
+
+                }
+                else
+                {
+                    outOfReachTarget.Add(botBase);
+                    return result;
+                }
+            }
+            
             ///////////////////////////////////////
         }
 
