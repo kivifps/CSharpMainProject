@@ -17,8 +17,18 @@ namespace UnitBrains.Player
         private float _cooldownTime = 0f;
         private bool _overheated;
 
-        List<Vector2Int> outOfReachTarget = new List<Vector2Int>();
+        private List<Vector2Int> OutOfReachTarget = new List<Vector2Int>();
 
+        private static int _counter = -1;
+        private const int _targetMaxNum = 3;
+        private int _unitNum;
+
+        public SecondUnitBrain()
+        {
+            _unitNum = _counter;
+            Debug.Log(_unitNum);
+            _counter++;
+        }
         protected override void GenerateProjectiles(Vector2Int forTarget, List<BaseProjectile> intoList)
         {
             float overheatTemperature = OverheatTemperature;
@@ -43,9 +53,9 @@ namespace UnitBrains.Player
         public override Vector2Int GetNextStep()
         {
             Vector2Int result = new Vector2Int();
-            if (outOfReachTarget.Count > 0)
+            if (OutOfReachTarget.Count > 0)
             {
-                result = unit.Pos.CalcNextStepTowards(outOfReachTarget[0]);
+                result = unit.Pos.CalcNextStepTowards(OutOfReachTarget[0]);
                 return result;
             }
             else return unit.Pos;
@@ -57,30 +67,26 @@ namespace UnitBrains.Player
             ///////////////////////////////////////
             // Homework 1.4 (1st block, 4rd module)
             ///////////////////////////////////////
-            float minDist = float.MaxValue;
             List<Vector2Int> result = new List<Vector2Int>();
-            Vector2Int DungTarget = new Vector2Int();
-            result = GetAllTargets().ToList();
-            if (result.Count > 0)
+            List<Vector2Int> allTarget = GetAllTargets().ToList();
+
+            if (allTarget.Count > 0)
             {
-                foreach (var target in result)
+                SortByDistanceToOwnBase(allTarget);
+                if(allTarget.Count < _counter + 1)
                 {
-                    if (DistanceToOwnBase(target) < minDist)
-                    {
-                        minDist = DistanceToOwnBase(target);
-                        DungTarget = target;
-                    }
+                    result.Add(allTarget[0]);
                 }
-                if(IsTargetInRange(DungTarget))
+                else result.Add(allTarget[_unitNum % _targetMaxNum]);
+
+                if (IsTargetInRange(result[0]))
                 {
-                    outOfReachTarget.Clear();
-                    result.Clear();
-                    result.Add(DungTarget);
+                    OutOfReachTarget.Clear();
                     return result;
                 }
                 else
                 {
-                    outOfReachTarget.Add(DungTarget);
+                    OutOfReachTarget.Add(result[0]);
                     result.Clear();
                     return result;
                 }
@@ -91,14 +97,14 @@ namespace UnitBrains.Player
 
                 if (IsTargetInRange(botBase))
                 {
-                    outOfReachTarget.Clear();
+                    OutOfReachTarget.Clear();
                     result.Add(botBase); 
                     return result;
 
                 }
                 else
                 {
-                    outOfReachTarget.Add(botBase);
+                    OutOfReachTarget.Add(botBase);
                     return result;
                 }
             }
