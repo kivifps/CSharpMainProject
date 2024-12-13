@@ -3,8 +3,10 @@ using System.Linq;
 using GluonGui.Dialog;
 using Model;
 using Model.Runtime.Projectiles;
+using UnitBrains.Pathfinding;
 using UnityEngine;
 using Utilities;
+using static UnityEngine.GraphicsBuffer;
 
 namespace UnitBrains.Player
 {
@@ -52,11 +54,11 @@ namespace UnitBrains.Player
 
         public override Vector2Int GetNextStep()
         {
-            Vector2Int result = new Vector2Int();
+            BaseUnitPath result;
             if (OutOfReachTarget.Count > 0)
             {
-                result = unit.Pos.CalcNextStepTowards(OutOfReachTarget[0]);
-                return result;
+                result = new MyUnitPath(runtimeModel, IsPlayerUnitBrain, unit.Pos, OutOfReachTarget[0]);
+                return result.GetNextStepFrom(unit.Pos);
             }
             else return unit.Pos;
             
