@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\UnitBrains\Enemy\DefaultEnemyUnitBrain.cs" />
     <Compile Include="Assets\Scripts\View\ProjectileView.cs" />
     <Compile Include="Assets\Scripts\View\StartMenuView.cs" />
+    <Compile Include="Assets\Scripts\UnitBrains\Pathfinding\Coordinator.cs" />
     <Compile Include="Assets\Scripts\Model\RuntimeModel.cs" />
     <Compile Include="Assets\Scripts\View\HealthBar.cs" />
     <Compile Include="Assets\Scripts\View\VFXView.cs" />
