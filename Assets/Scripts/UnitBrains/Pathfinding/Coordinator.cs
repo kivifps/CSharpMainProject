@@ -6,8 +6,9 @@ using UnityEngine.UIElements;
 using Utilities;
 
 public class Coordinator
-{ 
-    private static Coordinator _instance;
+{
+    public int PlayerUnitID = 0;
+    public int EnemyUnitID = 1;
     private static int _count = 0;
     private IReadOnlyRuntimeModel _runtimemodel;
     private TimeUtil _timeutil;
@@ -19,50 +20,44 @@ public class Coordinator
     public Vector2Int RecPoint => _recPoint;
     public int Count { get { return _count; } set { _count = value; } }
 
-    private Coordinator() 
+    public Coordinator(int PlayerUnit, RuntimeModel runtimemodel, TimeUtil timeutil) 
     {
-        _runtimemodel = ServiceLocator.Get<IReadOnlyRuntimeModel>();
-        _timeutil = ServiceLocator.Get<TimeUtil>();
-
-        _recPoint = _runtimemodel.RoMap.Bases[RuntimeModel.BotPlayerId];
+        this.PlayerUnitID = PlayerUnit;
+        EnemyUnitID = PlayerUnit == 0 ? 1 : 0;
+        _runtimemodel = runtimemodel;
+        _timeutil = timeutil;
         _timeutil.AddFixedUpdateAction(CoordinatorUpdate);
     }
-    public static Coordinator GetInstance()
-    {
-        if (_instance == null)
-            _instance = new Coordinator();
 
-        return _instance;
-    }
     private void CoordinatorUpdate(float deltatime)
     {
         CalculateRecommendation();
     }
     private void CalculateRecommendation()
     {
-        float middlePoint = (Vector2Int.Distance(_runtimemodel.RoMap.Bases[RuntimeModel.PlayerId], _runtimemodel.RoMap.Bases[RuntimeModel.BotPlayerId])) / 2;
+        float middlePoint = (Vector2Int.Distance(_runtimemodel.RoMap.Bases[PlayerUnitID], _runtimemodel.RoMap.Bases[EnemyUnitID])) / 2;
         Vector2Int PosResult = new Vector2Int();
         Vector2Int HealthResult = new Vector2Int();
         float minDist = float.MaxValue;
         float minHealth = float.MaxValue;
-        foreach ( var bot in _runtimemodel.RoBotUnits )
+        foreach ( var enemy in PlayerUnitID == 0 ? _runtimemodel.RoBotUnits : _runtimemodel.RoPlayerUnits)
         {
-            float dist = Vector2Int.Distance(_runtimemodel.RoMap.Bases[RuntimeModel.PlayerId], bot.Pos);
+            float dist = Vector2Int.Distance(_runtimemodel.RoMap.Bases[PlayerUnitID], enemy.Pos);
             if( dist < minDist)
             {
                 minDist = dist;
-                PosResult = bot.Pos;
+                PosResult = enemy.Pos;
             }
-            if(bot.Health < minHealth)
+            if(enemy.Health < minHealth)
             {
-                HealthResult = bot.Pos;
+                HealthResult = enemy.Pos;
             }
         }
 
-        if(Vector2Int.Distance(_runtimemodel.RoMap.Bases[RuntimeModel.PlayerId], PosResult) < middlePoint)
+        if(Vector2Int.Distance(_runtimemodel.RoMap.Bases[PlayerUnitID], PosResult) < middlePoint)
         {
             _recTarget = PosResult;
-            _recPoint = _runtimemodel.RoMap.Bases[RuntimeModel.PlayerId] + Vector2Int.right;
+            _recPoint = _runtimemodel.RoMap.Bases[PlayerUnitID] + Vector2Int.right;
         }
         else
         { 

@@ -30,12 +30,12 @@ namespace UnitBrains.Player
             {
                 BaseUnitPath path;
 
-                if(IsTargetInRange(Coordinator.GetInstance().RecTarget) || IsTargetInRange(Coordinator.GetInstance().RecPoint))
+                if(IsTargetInRange(unit._coordinator.RecTarget) || IsTargetInRange(unit._coordinator.RecPoint))
                 {
                     return unit.Pos;
                 }
 
-                path = new MyUnitPath(runtimeModel, IsPlayerUnitBrain, unit.Pos, Coordinator.GetInstance().RecPoint);
+                path = new MyUnitPath(runtimeModel, IsPlayerUnitBrain, unit.Pos, unit._coordinator.RecPoint);
                 return path.GetNextStepFrom(unit.Pos);
             }
             else
@@ -47,8 +47,8 @@ namespace UnitBrains.Player
         {
             int targetCount = runtimeModel.RoBotUnits.Count();
             int unitCount = runtimeModel.RoUnits.Count();
-            Vector2Int recTarget= Coordinator.GetInstance().RecTarget;
-            Vector2Int recPoint = Coordinator.GetInstance().RecPoint;
+            Vector2Int recTarget= unit._coordinator.RecTarget;
+            Vector2Int recPoint = unit._coordinator.RecPoint;
 
             if (IsTargetInRange(runtimeModel.RoMap.Bases[RuntimeModel.BotPlayerId]))
             {
@@ -62,15 +62,19 @@ namespace UnitBrains.Player
 
             if (IsTargetInRange(recTarget))
             {
-                Coordinator.GetInstance().Count++;
-                if (Coordinator.GetInstance().Count > 1)
+                unit._coordinator.Count++;
+                if (unit._coordinator.Count > 1)
                 {
                     return new List<Vector2Int> { recTarget };
                 }
             }
             else if (IsTargetInRange(recPoint))
             {
-                return new List<Vector2Int> { recPoint };
+                return base.SelectTargets();
+            }
+            else
+            {
+                return base.SelectTargets();
             }
             if(unitCount < 3)
             {

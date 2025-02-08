@@ -23,11 +23,13 @@ namespace Model.Runtime
         private IReadOnlyRuntimeModel _runtimeModel;
         private BaseUnitBrain _brain;
 
+        public Coordinator _coordinator;
+
         private float _nextBrainUpdateTime = 0f;
         private float _nextMoveTime = 0f;
         private float _nextAttackTime = 0f;
         
-        public Unit(UnitConfig config, Vector2Int startPos)
+        public Unit(UnitConfig config, Vector2Int startPos, Coordinator coordinator)
         {
             Config = config;
             Pos = startPos;
@@ -35,6 +37,8 @@ namespace Model.Runtime
             _brain = UnitBrainProvider.GetBrain(config);
             _brain.SetUnit(this);
             _runtimeModel = ServiceLocator.Get<IReadOnlyRuntimeModel>();
+
+            _coordinator = coordinator;
         }
 
         public void Update(float deltaTime, float time)
