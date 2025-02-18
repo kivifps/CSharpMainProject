@@ -7,6 +7,7 @@ using UnitBrains;
 using UnitBrains.Pathfinding;
 using UnityEngine;
 using Utilities;
+using static UnityEngine.UI.CanvasScaler;
 
 namespace Model.Runtime
 {
@@ -23,13 +24,15 @@ namespace Model.Runtime
         private IReadOnlyRuntimeModel _runtimeModel;
         private BaseUnitBrain _brain;
 
+        private EffectSystem _effectSystem;
         public Coordinator _coordinator;
 
         private float _nextBrainUpdateTime = 0f;
         private float _nextMoveTime = 0f;
         private float _nextAttackTime = 0f;
+        private bool _isFullHP = true;
         
-        public Unit(UnitConfig config, Vector2Int startPos, Coordinator coordinator)
+        public Unit(UnitConfig config, Vector2Int startPos, Coordinator coordinator, EffectSystem effectSystem)
         {
             Config = config;
             Pos = startPos;
@@ -38,6 +41,8 @@ namespace Model.Runtime
             _brain.SetUnit(this);
             _runtimeModel = ServiceLocator.Get<IReadOnlyRuntimeModel>();
 
+            _effectSystem = effectSystem;
+            effectSystem.UnitRegister(this);
             _coordinator = coordinator;
         }
 
@@ -45,6 +50,7 @@ namespace Model.Runtime
         {
             if (IsDead)
                 return;
+            
             
             if (_nextBrainUpdateTime < time)
             {
@@ -54,13 +60,13 @@ namespace Model.Runtime
             
             if (_nextMoveTime < time)
             {
-                _nextMoveTime = time + Config.MoveDelay;
+                _nextMoveTime = time + (Config.MoveDelay * _effectSystem.GetStatus(this).MoveModifier);
                 Move();
             }
             
             if (_nextAttackTime < time && Attack())
             {
-                _nextAttackTime = time + Config.AttackDelay;
+                _nextAttackTime = time + (Config.AttackDelay * _effectSystem.GetStatus(this).AttackSpeedModifier);
             }
         }
 
@@ -100,7 +106,17 @@ namespace Model.Runtime
 
         public void TakeDamage(int projectileDamage)
         {
+            if (_isFullHP)
+            {
+                _effectSystem.AddEffect(this, StatusType.Buff);
+                _isFullHP = !_isFullHP;
+            }
+            
             Health -= projectileDamage;
+            if (Health < (Config.MaxHealth / 2))
+            {
+                _effectSystem.AddEffect(this, StatusType.Debuff);
+            }
         }
     }
 }

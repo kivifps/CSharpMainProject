@@ -64,6 +64,7 @@ namespace UnitBrains
         public void SetUnit(Unit unit)
         {
             this.unit = unit;
+            
         }
 
         public virtual void Update(float deltaTime, float time)
