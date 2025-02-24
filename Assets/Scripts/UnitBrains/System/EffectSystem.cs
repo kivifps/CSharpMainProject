@@ -1,5 +1,6 @@
 using Assets.Scripts.UnitBrains.System;
 using Model.Runtime;
+using Model.Runtime.ReadOnly;
 using PlasticGui.WorkspaceWindow.PendingChanges;
 using System;
 using System.Collections;
@@ -15,13 +16,15 @@ public enum StatusType
 }
 public class EffectSystem : MonoBehaviour
 {
-    private Dictionary<Unit, IStatusEffect> _effectsStatus = new();
+    private Dictionary<IReadOnlyUnit, IStatusEffect> _effectsStatus = new();
     private Coroutine _coroutine;
-    public void UnitRegister(Unit unit)
+
+    public Dictionary<IReadOnlyUnit, IStatusEffect> EffectStatus => _effectsStatus;
+    public void UnitRegister(IReadOnlyUnit unit)
     {
         _effectsStatus[unit] = new BuffEffects(BuffType.None);
     }
-    public void AddEffect(Unit unit, StatusType type)
+    public void AddEffect(IReadOnlyUnit unit, StatusType type)
     {
         switch (type)
         {
@@ -39,7 +42,7 @@ public class EffectSystem : MonoBehaviour
         StartCoroutine(EffectLifetime(unit));
 
     }
-    private IEnumerator EffectLifetime(Unit unit)
+    private IEnumerator EffectLifetime(IReadOnlyUnit unit)
     {
         
         yield return new WaitForSeconds(_effectsStatus[unit].Duration);
@@ -47,11 +50,11 @@ public class EffectSystem : MonoBehaviour
         RemoveEffect(unit);
     }
     
-    private void RemoveEffect(Unit unit)
+    private void RemoveEffect(IReadOnlyUnit unit)
     {
         _effectsStatus[unit].BuffBreak();
     }
-    public IStatusEffect GetStatus(Unit unit)
+    public IStatusEffect GetStatus(IReadOnlyUnit unit)
     {
         return _effectsStatus[unit];
     }

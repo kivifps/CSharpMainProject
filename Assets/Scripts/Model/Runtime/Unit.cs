@@ -30,7 +30,7 @@ namespace Model.Runtime
         private float _nextBrainUpdateTime = 0f;
         private float _nextMoveTime = 0f;
         private float _nextAttackTime = 0f;
-        private bool _isFullHP = true;
+
         
         public Unit(UnitConfig config, Vector2Int startPos, Coordinator coordinator, EffectSystem effectSystem)
         {
@@ -106,12 +106,6 @@ namespace Model.Runtime
 
         public void TakeDamage(int projectileDamage)
         {
-            if (_isFullHP)
-            {
-                _effectSystem.AddEffect(this, StatusType.Buff);
-                _isFullHP = !_isFullHP;
-            }
-            
             Health -= projectileDamage;
             if (Health < (Config.MaxHealth / 2))
             {

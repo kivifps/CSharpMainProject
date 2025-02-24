@@ -35,7 +35,7 @@ namespace Assets.Scripts.UnitBrains.System
 
                 case 0:
                     _name = BuffType.FastAttack.ToString();
-                    _attackSpeedModifier = 0.5f;
+                    _attackSpeedModifier = 0.00001f;
                     break;
                 case 1:
                     _name = BuffType.FastMovement.ToString();
@@ -54,7 +54,7 @@ namespace Assets.Scripts.UnitBrains.System
 
                 case BuffType.FastAttack:
                     _name = BuffType.FastAttack.ToString();
-                    _attackSpeedModifier = 0.5f;
+                    _attackSpeedModifier = 0.0001f;
                     break;
                 case BuffType.FastMovement:
                     _name = BuffType.FastMovement.ToString();
