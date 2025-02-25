@@ -12,7 +12,7 @@ namespace Assets.Scripts.UnitBrains.System
         SlowMovement,
         None
     }
-    public class DebuffEffects : IStatusEffect
+ /*   public class DebuffEffects : IStatusEffect<BuffType>
     {
         private string _name;
         private float _duration = 15f;
@@ -50,6 +50,6 @@ namespace Assets.Scripts.UnitBrains.System
             _attackSpeedModifier = 1f;
             _moveModifier = 1f;
         }
-    }
+    }*/
 }
 

@@ -33,9 +33,6 @@ namespace Controller
             _gameplayView = ServiceLocator.Get<Gameplay3dView>();
             _settings = ServiceLocator.Get<Settings>();
             _timeUtil = ServiceLocator.Get<TimeUtil>();
-            _effectSystem = ServiceLocator.Get<EffectSystem>();
-
-            
         }
 
         public void StartLevel(int level)
@@ -65,23 +62,23 @@ namespace Controller
             if (unitConfig.Cost > _runtimeModel.Money[RuntimeModel.PlayerId])
                 return;
             
-            SpawnUnit(RuntimeModel.PlayerId, unitConfig, _playerCoordinator, _effectSystem );
+            SpawnUnit(RuntimeModel.PlayerId, unitConfig, _playerCoordinator);
             TryStartSimulation();
         }
 
         private void OnBotUnitChosen(UnitConfig unitConfig)
         {
-            SpawnUnit(RuntimeModel.BotPlayerId, unitConfig, _botCoordinator, _effectSystem);
+            SpawnUnit(RuntimeModel.BotPlayerId, unitConfig, _botCoordinator);
             TryStartSimulation();
         }
 
-        private void SpawnUnit(int forPlayer, UnitConfig config, Coordinator coordinator, EffectSystem effectSystem)
+        private void SpawnUnit(int forPlayer, UnitConfig config, Coordinator coordinator)
         {
             var pos = _runtimeModel.Map.FindFreeCellNear(
                 _runtimeModel.Map.Bases[forPlayer],
                 _runtimeModel.RoUnits.Select(x => x.Pos).ToHashSet());
             
-            var unit = new Unit(config, pos, coordinator, effectSystem);
+            var unit = new Unit(config, pos, coordinator);
             
             _runtimeModel.Money[forPlayer] -= config.Cost;
             _runtimeModel.PlayersUnits[forPlayer].Add(unit);

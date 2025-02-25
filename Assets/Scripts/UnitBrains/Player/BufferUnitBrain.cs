@@ -16,8 +16,8 @@ namespace Assets.Scripts.UnitBrains.Player
     {
         public override string TargetUnitName => "Buffer Muffin";
 
-        private const float Cooldown = 2f;
-        private const float StopTime = 0.5f;
+        private const float Cooldown = 1f;
+        private const float StopTime = 0f;
         private float _timer = 0;
 
         private bool _isBuffing = false;
@@ -48,7 +48,7 @@ namespace Assets.Scripts.UnitBrains.Player
         {
             foreach(var unit in GetUnitsInRadius(unit.Config.AttackRange, IsPlayerUnitBrain))
             {
-                if (effectSystem.EffectStatus[unit].Name != "None")
+                if (effectSystem.EffectStatus.ContainsKey(unit))
                     continue;
 
                 effectSystem.AddEffect(unit, StatusType.Buff);

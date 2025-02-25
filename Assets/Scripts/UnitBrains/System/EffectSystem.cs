@@ -20,29 +20,28 @@ public class EffectSystem : MonoBehaviour
     private Coroutine _coroutine;
 
     public Dictionary<IReadOnlyUnit, IStatusEffect> EffectStatus => _effectsStatus;
-    public void UnitRegister(IReadOnlyUnit unit)
+    public void UnitRegister(Unit unit)
     {
-        _effectsStatus[unit] = new BuffEffects(BuffType.None);
+
     }
     public void AddEffect(IReadOnlyUnit unit, StatusType type)
     {
         switch (type)
         {
             case StatusType.Buff:
-                _effectsStatus[unit] = new BuffEffects();
+                _effectsStatus[unit] = new BuffEffects(BuffType.IncreaseRange,(Unit)unit);
                 Debug.LogWarning($"AddEffect{_effectsStatus[unit].Name}");
                 break;
-            case StatusType.Debuff:
+/*            case StatusType.Debuff:
                 _effectsStatus[unit] = new DebuffEffects();
                 Debug.LogWarning($"AddEffect{_effectsStatus[unit].Name}");
-                break;
+                break;*/
                 
         }
-        if (_effectsStatus[unit].Name == "None") return;
-        StartCoroutine(EffectLifetime(unit));
+        StartCoroutine(EffectLifetime((Unit)unit));
 
     }
-    private IEnumerator EffectLifetime(IReadOnlyUnit unit)
+    private IEnumerator EffectLifetime(Unit unit)
     {
         
         yield return new WaitForSeconds(_effectsStatus[unit].Duration);
@@ -50,12 +49,10 @@ public class EffectSystem : MonoBehaviour
         RemoveEffect(unit);
     }
     
-    private void RemoveEffect(IReadOnlyUnit unit)
+    private void RemoveEffect(Unit unit)
     {
-        _effectsStatus[unit].BuffBreak();
-    }
-    public IStatusEffect GetStatus(IReadOnlyUnit unit)
-    {
-        return _effectsStatus[unit];
+        _effectsStatus[unit].BuffBreak(unit);
+        _effectsStatus.Remove(unit);
+
     }
 }

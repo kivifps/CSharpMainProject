@@ -3,23 +3,7 @@
   "WorkspaceRootPath": "D:\\ForkWork\\CSharpMainProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\unitbrains\\player\\bufferunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\player\\bufferunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\enterpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\enterpoint.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\unitbrains\\baseunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\baseunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\model\\runtime\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\model\\runtime\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\model\\runtime\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -27,8 +11,36 @@
       "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\buffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\controller\\rootcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\controller\\rootcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\model\\config\\unitconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\model\\config\\unitconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\player\\bufferunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\player\\bufferunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\player\\secondunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\player\\secondunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\player\\thirdunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\player\\thirdunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\debuffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\debuffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\baseunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\baseunitbrain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnterPoint.cs",
-              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\EnterPoint.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnterPoint.cs",
-              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\EnterPoint.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnterPoint.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DebuffEffects.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\DebuffEffects.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\DebuffEffects.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\DebuffEffects.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\DebuffEffects.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAADQAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T20:29:31.099Z",
+              "WhenOpened": "2025-02-25T19:56:09.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ThirdUnitBrain.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\ThirdUnitBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\Player\\ThirdUnitBrain.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\ThirdUnitBrain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\Player\\ThirdUnitBrain.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T17:11:44.745Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "RootController.cs",
-              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Controller\\RootController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Controller\\RootController.cs",
-              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Controller\\RootController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Controller\\RootController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwE0AAAAQAAAAAAAAAA==",
+              "Title": "SecondUnitBrain.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\SecondUnitBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\Player\\SecondUnitBrain.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\SecondUnitBrain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\Player\\SecondUnitBrain.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T19:55:46.165Z",
+              "WhenOpened": "2025-02-25T16:55:57.198Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "BufferUnitBrain.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:49:53.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BaseUnitBrain.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:42:50.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitConfig.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Config\\UnitConfig.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Model\\Config\\UnitConfig.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Config\\UnitConfig.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Model\\Config\\UnitConfig.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-25T11:20:32.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "BuffEffects.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAcwCUAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAwDoAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T19:47:50.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Unit.cs",
-              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Runtime\\Unit.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
-              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Runtime\\Unit.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T17:52:42.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "BaseUnitBrain.cs",
-              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
-              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\BaseUnitBrain.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAABSAAAAAAAAAA==",
+              "Title": "IStatusEffect.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T17:52:16.319Z",
+              "WhenOpened": "2025-02-25T11:26:02.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BufferUnitBrain.cs",
-              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
-              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\Player\\BufferUnitBrain.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwBIAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T11:52:03.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EffectSystem.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAACAAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAgwB8AAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T19:34:36.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Unit.cs",
+              "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Runtime\\Unit.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
+              "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Runtime\\Unit.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAswEYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T17:52:42.938Z",
               "EditorCaption": ""
             }
           ]

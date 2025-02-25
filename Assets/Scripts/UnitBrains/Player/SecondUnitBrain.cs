@@ -46,6 +46,15 @@ namespace UnitBrains.Player
                     var projectile = CreateProjectile(forTarget);
                     AddProjectileToList(projectile, intoList);
                 }
+                if (unit.DubleStrike)
+                {
+                    Debug.LogWarning("DubleStike");
+                    for (int i = 0; i < GetTemperature(); i++)
+                    {
+                        var projectile = CreateProjectile(forTarget);
+                        AddProjectileToList(projectile, intoList);
+                    }
+                }
 
             }
             
