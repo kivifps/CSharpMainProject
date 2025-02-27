@@ -37,7 +37,7 @@ namespace Assets.Scripts.UnitBrains.System
         {    
             int rand = UnityEngine.Random.Range(0, 4);
             BuffType type = (BuffType)rand;
-            SetBuff(rand, unit);
+            SetBuff(type, unit);
         }
         public BuffEffects(BuffType type, Unit unit) 
         {

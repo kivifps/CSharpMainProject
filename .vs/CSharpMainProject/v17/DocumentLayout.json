@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\ForkWork\\CSharpMainProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\buffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\buffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\effectsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\model\\runtime\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\model\\runtime\\unit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|d:\\forkwork\\csharpmainproject\\assets\\scripts\\unitbrains\\system\\buffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\buffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|solutionrelative:assets\\scripts\\unitbrains\\system\\istatuseffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{30E4A36B-DBC1-3EB5-7C27-41F2EDC2C301}|Root.csproj|D:\\ForkWork\\CSharpMainProject\\assets\\scripts\\unitbrains\\system\\debuffeffects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
@@ -114,8 +114,7 @@
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\DebuffEffects.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-25T19:56:09.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-25T19:56:09.474Z"
             },
             {
               "$type": "Document",
@@ -143,33 +142,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "IStatusEffect.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
               "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\IStatusEffect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-25T11:26:02.385Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "EffectSystem.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\EffectSystem.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB8AAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T19:34:36.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T19:34:36.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Unit.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\Model\\Runtime\\Unit.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
@@ -177,18 +175,17 @@
               "RelativeToolTip": "Assets\\Scripts\\Model\\Runtime\\Unit.cs",
               "ViewState": "AgIAAIQAAAAAAAAAAAAnwJQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T17:52:42.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-24T17:52:42.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "BuffEffects.cs",
               "DocumentMoniker": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "ToolTip": "D:\\ForkWork\\CSharpMainProject\\Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
               "RelativeToolTip": "Assets\\Scripts\\UnitBrains\\System\\BuffEffects.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T19:47:50.53Z",
               "EditorCaption": ""
