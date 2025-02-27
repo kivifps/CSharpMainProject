@@ -147,10 +147,6 @@ namespace Model.Runtime
         public void TakeDamage(int projectileDamage)
         {
             Health -= projectileDamage;
-            /*if (Health < (Config.MaxHealth / 2))
-            {
-                _effectSystem.AddEffect(this, StatusType.Debuff);
-            }*/
         }
     }
 }

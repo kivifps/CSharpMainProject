@@ -29,14 +29,14 @@ public class EffectSystem : MonoBehaviour
         switch (type)
         {
             case StatusType.Buff:
-                _effectsStatus[unit] = new BuffEffects(BuffType.IncreaseRange,(Unit)unit);
+                _effectsStatus[unit] = new BuffEffects((Unit)unit);
                 Debug.LogWarning($"AddEffect{_effectsStatus[unit].Name}");
                 break;
-/*            case StatusType.Debuff:
-                _effectsStatus[unit] = new DebuffEffects();
+            case StatusType.Debuff:
+                _effectsStatus[unit] = new DebuffEffects((Unit)unit);
                 Debug.LogWarning($"AddEffect{_effectsStatus[unit].Name}");
-                break;*/
-                
+                break;
+
         }
         StartCoroutine(EffectLifetime((Unit)unit));
 

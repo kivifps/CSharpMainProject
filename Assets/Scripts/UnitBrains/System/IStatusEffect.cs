@@ -10,9 +10,8 @@ public interface IStatusEffect<T> : IStatusEffect where T : Enum
 {
     new T Name { get; }
     new float Duration { get; }
-    float Modification {  get; }
+    float Modificator {  get; }
     new public void BuffBreak(Unit unit);
-    public bool BuffFit(string name, BuffType type);
 }
 public interface IStatusEffect
 {

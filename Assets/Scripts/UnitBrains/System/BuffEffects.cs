@@ -31,7 +31,7 @@ namespace Assets.Scripts.UnitBrains.System
         public BuffType Name => _name;
         Enum IStatusEffect.Name => Name;
         public float Duration => _duration;
-        public float Modification => _modificator;
+        public float Modificator => _modificator;
 
         public BuffEffects(Unit unit)
         {    

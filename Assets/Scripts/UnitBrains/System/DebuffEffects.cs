@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Runtime;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,46 +11,57 @@ namespace Assets.Scripts.UnitBrains.System
     {
         SlowAttack,
         SlowMovement,
-        None
     }
- /*   public class DebuffEffects : IStatusEffect<BuffType>
+    public class DebuffEffects : IStatusEffect<DebuffType>
     {
-        private string _name;
+        private DebuffType _name;
         private float _duration = 15f;
-        private float _attackSpeedModifier = 1;
-        private float _moveModifier = 1;
-
-        public string Name => _name;
+        private float _modificator = 1f;
+        public DebuffType Name => _name;
+        Enum IStatusEffect.Name => Name;
         public float Duration => _duration;
-        public float AttackSpeedModifier => _attackSpeedModifier;
-        public float MoveModifier => _moveModifier;
+        public float Modificator => _modificator;
 
-        public DebuffEffects()
+
+        public DebuffEffects(Unit unit)
         {
-            int rand = UnityEngine.Random.Range(0, 3);
-            switch (rand)
-            {
+            int rand = UnityEngine.Random.Range(0, 4);
+            BuffType type = (BuffType)rand;
+            SetDebuff(rand, unit);
+        }
+        public DebuffEffects(DebuffType type, Unit unit)
+        {
+            SetDebuff(type, unit);
+        }
 
-                case 0:
-                    _name = DebuffType.SlowAttack.ToString();
-                    _attackSpeedModifier = 2f;
+        private void SetDebuff<T>(T type, Unit unit)
+        {
+            switch (type)
+            {
+                case DebuffType.SlowAttack:
+                    _name = DebuffType.SlowAttack;
+                    _modificator = 2f;
+                    unit.StatModification<float>(Unit.UnitModStats.Attack, _modificator);
                     break;
-                case 1:
-                    _name = DebuffType.SlowMovement.ToString();
-                    _moveModifier = 10f;
-                    break;
-                case 2:
-                    _name = DebuffType.None.ToString();
-                    _duration = float.MaxValue;
+                case DebuffType.SlowMovement:
+                    _name = DebuffType.SlowMovement;
+                    _modificator = 10f;
+                    unit.StatModification<float>(Unit.UnitModStats.Move, _modificator);
                     break;
             }
         }
-        public void BuffBreak()
+        public void BuffBreak(Unit unit)
         {
-            _name = BuffType.None.ToString();
-            _attackSpeedModifier = 1f;
-            _moveModifier = 1f;
+            switch (_name)
+            {
+                case DebuffType.SlowAttack:
+                    unit.StatModification<float>(Unit.UnitModStats.Attack, 1f);
+                    break;
+                case DebuffType.SlowMovement:
+                    unit.StatModification<float>(Unit.UnitModStats.Move, 1f);
+                    break;
+            }
         }
-    }*/
+    }
 }
 
